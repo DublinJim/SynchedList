@@ -2,7 +2,7 @@ public class Counter {
 
     int count;
 
-    public void countUp() {
+    public synchronized void countUp() {
         count++;
     }
 
