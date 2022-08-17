@@ -10,15 +10,17 @@ public class SyncLists {
     public static void main(String[] args) {
 
         ThreadDemo trd1 = new ThreadDemo();
-        trd1.start();
+
         ThreadDemo2 trd2 = new ThreadDemo2();
-        trd2.start();
+
         for (int i = 0; i < 10; i++) {
             nameList.add("Item-" + i);
             //  Thread.sleep(500);
         }
-
+        trd1.start();
+        trd2.start();
         System.out.println(nameList);
         System.out.println("----------------------------");
+
     }
 }
